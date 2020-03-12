@@ -1,0 +1,4 @@
+.AsideHeader {
+  display: flex;
+  flex-direction: column;
+}

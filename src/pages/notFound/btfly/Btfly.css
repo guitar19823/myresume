@@ -1,0 +1,56 @@
+.Btfly {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10%;
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;
+  animation: btfly_flies 60s linear infinite;
+}
+
+.Btfly > div {
+  display: flex;
+  transform-style: preserve-3d;
+  transform: rotateX(-90deg);
+}
+
+.Btfly > div::before,
+.Btfly > div::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 27px;
+  background-size: 100%;
+}
+
+.Btfly > div::before {
+  background-image: url(./btfly_l.png);
+  transform-origin: right;
+  animation: flap_wing_left .5s ease-in-out infinite;
+}
+
+.Btfly > div::after {
+  background-image: url(./btfly_r.png);
+  transform-origin: left;
+  animation: flap_wing_right .5s ease-in-out infinite;
+}
+
+@keyframes flap_wing_left {
+  0% { transform: rotateY(0) }
+  50% { transform: rotateY(90deg) }
+  100% { transform: rotateY(0) }
+}
+
+@keyframes flap_wing_right {
+  0% { transform: rotateY(90deg) }
+  50% { transform: rotateY(0) }
+  100% { transform: rotateY(90deg) }
+}
+
+@keyframes btfly_flies {
+  0% { transform: rotateX(-25deg) rotateY(0) }
+  100% { transform: rotateX(-25deg) rotateY(-360deg) }
+}

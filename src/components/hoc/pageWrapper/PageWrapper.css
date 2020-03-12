@@ -1,0 +1,50 @@
+.PageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #b2b2b2;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  overflow: hidden;
+  perspective: 900px;
+}
+
+.PageWrapper_wr {
+  display: flex;
+  background-color: #e2e2e2;
+  width: 900px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.page_in {
+  animation: open_page .7s ease-out both;
+}
+
+.page_out {
+  animation: close_page 1s ease-in both;
+}
+
+@keyframes open_page {
+  0% {
+    transform: translateX(100vw) rotateY(50deg);
+    box-shadow: -700px 200px 30px -20px #303030;
+  }
+  100% {
+    transform: translateX(0);
+    box-shadow: -35px 50px 30px -20px #303030;
+  }
+}
+
+@keyframes close_page {
+  0% {
+    transform: translateX(0);
+    box-shadow: -35px 50px 30px -20px #303030;
+  }
+  100% {
+    transform: translateX(-100vw) rotateY(-90deg);
+    box-shadow: -35px 50px 30px -20px #303030;
+  }
+}

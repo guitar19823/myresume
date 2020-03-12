@@ -1,0 +1,26 @@
+.Navbar {
+  padding: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.NavItem {
+  margin: 10px 0;
+}
+
+.NavLink {
+  color: #333;
+  text-decoration: none;
+}
+
+.NavLink:hover {
+  color: #777;
+  cursor: pointer;
+}
+
+.active_page {
+  color: #208ca0;
+  text-decoration: none;
+}

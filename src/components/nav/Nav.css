@@ -1,0 +1,26 @@
+.Nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #e2e2e2;
+  transition: transform .3s ease-in-out;
+}
+
+.nav_open {
+  transform: translate(200px);
+}
+
+.nav_close {
+  transform: translate(0);
+}
+
+.Nav .Button {
+  top: 15px;
+  right: -40px;
+}

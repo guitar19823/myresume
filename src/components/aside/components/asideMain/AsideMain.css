@@ -1,0 +1,51 @@
+.AsideMain {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 45px 0;
+  color: #e2e2e2;
+}
+
+.User {
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+.User__name {
+  font-size: 36px;
+  line-height: 32px;
+  margin-bottom: 5px;
+}
+
+.AsideSection {
+  margin-bottom: 30px;
+}
+
+.AsideSection__title {
+  text-transform: uppercase;
+  color: #208ca0;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.AsideSection__content {
+  padding-top: 5px;
+}
+
+.AsideSection__content > p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.AsideSection__content > p > img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.AsideSection__content > p > a {
+  color: #e2e2e2;
+  text-decoration: none;
+}
