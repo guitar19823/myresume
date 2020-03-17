@@ -1,5 +1,6 @@
 .Btfly {
   position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -8,7 +9,7 @@
   width: inherit;
   height: inherit;
   transform-style: preserve-3d;
-  animation: btfly_flies 60s linear infinite;
+  animation: btfly_flies 10s linear infinite;
 }
 
 .Btfly > div {
@@ -52,5 +53,18 @@
 
 @keyframes btfly_flies {
   0% { transform: rotateX(-25deg) rotateY(0) }
+  50% { transform: rotateX(-25deg) rotateY(-180deg) }
   100% { transform: rotateX(-25deg) rotateY(-360deg) }
+}
+
+@media (min-width: 640px) {
+  .Btfly {
+    animation: btfly_flies 20s linear infinite;
+  }
+}
+
+@media (min-width: 990px) {
+  .Btfly {
+    animation: btfly_flies 30s linear infinite;
+  }
 }

@@ -1,32 +1,37 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { AsideSection } from '../asideHoc/asideSection/AsideSection';
 import { images } from '../../../../images';
-import { PageContext } from '../../../../store/page/pageContext';
 import './AsideMain.css';
+import { Loader } from '../../../loader/Loader';
 
 export const AsideMain = () => {
-  const { user } = useContext(PageContext);
+  const { pageData, isLoaded } = useSelector(state => state.page);
+
+  if (!isLoaded) {
+    return <Loader />;
+  }
 
   return (
     <main className="AsideMain">
       <section className="User">
         <p className="User__name">
-          { user.name }<br />
-          <strong>{ user.surname }</strong>
+          { pageData.user.name }<br />
+          <strong>{ pageData.user.surname }</strong>
         </p>
-        <h3>{ user.status }</h3>
+        <h3>{ pageData.user.status }</h3>
       </section>
 
       {
-        Object.keys(user.data).map(value => {
+        Object.keys(pageData.user.data).map(value => {
           return (
             <AsideSection key={value} title={value}>
               {
-                Object.keys(user.data[value]).map(item => {
+                Object.keys(pageData.user.data[value]).map(item => {
                   return (
                     <p key={item}>
                       { value !== 'profile' && <img src={images[item]} alt={images[item]} /> }
-                      { value === 'social' ? <a href={user.data[value][item]}>{item}</a> : user.data[value][item] }
+                      { value === 'social' ? <a href={pageData.user.data[value][item]}>{item}</a> : pageData.user.data[value][item] }
                     </p>
                   );
                 })

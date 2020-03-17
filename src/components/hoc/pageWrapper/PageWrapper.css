@@ -1,50 +1,67 @@
 .PageWrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #b2b2b2;
   width: 100%;
   min-height: 100vh;
-  padding: 50px 0;
   overflow: hidden;
-  perspective: 900px;
 }
 
 .PageWrapper_wr {
   display: flex;
+  flex-direction: column;
   background-color: #e2e2e2;
-  width: 900px;
-  border-radius: 3px;
+  width: 100%;
+  height: inherit;
+  border-radius: 0px;
   overflow: hidden;
 }
 
-.page_in {
-  animation: open_page .7s ease-out both;
-}
-
-.page_out {
-  animation: close_page 1s ease-in both;
-}
-
-@keyframes open_page {
-  0% {
-    transform: translateX(100vw) rotateY(50deg);
-    box-shadow: -700px 200px 30px -20px #303030;
-  }
-  100% {
-    transform: translateX(0);
-    box-shadow: -35px 50px 30px -20px #303030;
+@media (min-width: 480px) {
+  .PageWrapper_wr {
+    flex-direction: row;
   }
 }
 
-@keyframes close_page {
-  0% {
-    transform: translateX(0);
-    box-shadow: -35px 50px 30px -20px #303030;
+@media (min-width: 920px) {
+  .PageWrapper {
+    padding: 50px 0;
+    perspective: 900px;
   }
-  100% {
-    transform: translateX(-100vw) rotateY(-90deg);
-    box-shadow: -35px 50px 30px -20px #303030;
+  
+  .PageWrapper_wr {
+    width: 900px;
+    border-radius: 3px;
+  }
+
+  .page_in {
+    animation: open_page .7s ease-out both;
+  }
+  
+  .page_out {
+    animation: close_page 1s ease-in both;
+  }
+  
+  @keyframes open_page {
+    0% {
+      transform: translateX(100vw) rotateY(50deg);
+      box-shadow: -700px 200px 30px -20px #303030;
+    }
+    100% {
+      transform: translateX(0);
+      box-shadow: -35px 50px 30px -20px #303030;
+    }
+  }
+  
+  @keyframes close_page {
+    0% {
+      transform: translateX(0);
+      box-shadow: -35px 50px 30px -20px #303030;
+    }
+    100% {
+      transform: translateX(-100vw) rotateY(-90deg);
+      box-shadow: -35px 50px 30px -20px #303030;
+    }
   }
 }

@@ -1,6 +1,21 @@
 .ContentWrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 65%;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 480px) {
+  .ContentWrapper {
+    width: 60%;
+  }
+}
+
+@media (min-width: 990px) {
+  .ContentWrapper {
+    width: 65%;
+  }
 }

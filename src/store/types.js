@@ -1,1 +1,1 @@
-export const SET_REDIRECT = 'SET_REDIRECT';
+export const LOAD_PAGE_DATA = 'LOAD_PAGE_DATA';

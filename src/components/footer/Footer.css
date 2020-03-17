@@ -1,11 +1,26 @@
 .Footer {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 50px;
   width: 100%;
-  background-color: #777;
+  background-color: #333;
   color: #e2e2e2;
-  padding-right: 45px;
+  padding-right: 15px;
   text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+  .Footer {
+    background-color: #777;
+  }
+}
+
+@media (min-width: 990px) {
+  .Footer {
+    background-color: #777;
+    padding-right: 45px;
+  }
 }

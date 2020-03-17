@@ -1,12 +1,12 @@
 .AsideMain {
   display: flex;
   flex-direction: column;
-  padding: 45px 45px 0;
+  padding: 15px 15px 0;
   color: #e2e2e2;
 }
 
 .User {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   text-transform: uppercase;
 }
 
@@ -48,4 +48,14 @@
 .AsideSection__content > p > a {
   color: #e2e2e2;
   text-decoration: none;
+}
+
+@media (min-width: 990px) {
+  .AsideMain {
+    padding: 45px 45px 0;
+  }
+
+  .User {
+    margin-bottom: 35px;
+  }
 }

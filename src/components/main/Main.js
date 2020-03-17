@@ -1,20 +1,25 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { MainSection } from './components/mainHoc/MainSection';
 import { images } from '../../images';
-import { PageContext } from '../../store/page/pageContext';
 import './Main.css';
+import { Loader } from '../loader/Loader';
 
 export const Main = () => {
-  const { info } = useContext(PageContext);
-
+  const { pageData, isLoaded } = useSelector(state => state.page);
+  
+  if (!isLoaded) {
+    return <Loader />;
+  }
+  
   return (
     <main className="Main">
       {
-        Object.keys(info).map(value => {
+        Object.keys(pageData.info).map(value => {
           return (
-            <MainSection key={value} title={info[value].title} image={images[value]}>
+            <MainSection key={value} title={pageData.info[value].title} image={images[value]}>
               {
-                info[value].data.map((item, key) => {
+                pageData.info[value].data.map((item, key) => {
                   if (value === 'education' || value === 'experience') {
                     return (
                       <div key={key} className="MainSection__content">
