@@ -1,0 +1,49 @@
+.SettingsSection_wr {
+  padding-top: 50px;
+}
+
+.SettingsSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 0;
+  background-color: #e2e2e2;
+}
+
+.SettingsSection strong {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.SettingsSection__buttons {
+  display: flex;
+}
+
+.SettingsSection button {
+  padding: 5px 10px;
+  border: none;
+  margin-left: 20px;
+  color: #e2e2e2;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.btn_grey {
+  background-color: #777;
+}
+
+.btn_blue {
+  background-color: #208ca0;
+}
+
+@media (min-width: 990px) {
+  .SettingsSection_wr {
+    padding-top: 0;
+  }
+
+  .SettingsSection__buttons {
+    justify-content: flex-start;
+  }
+}

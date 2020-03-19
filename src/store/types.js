@@ -1,1 +1,7 @@
 export const LOAD_PAGE_DATA = 'LOAD_PAGE_DATA';
+export const SET_LANGUAGE = 'SET_LANGUAGE';
+export const SHOW_LOADER = 'SHOW_LOADER';
+export const HIDE_LOADER = 'HIDE_LOADER';
+
+export const OPEN_IMAGE_PANEL = 'OPEN_IMAGE_PANEL';
+export const CLOSE_IMAGE_PANEL = 'CLOSE_IMAGE_PANEL';

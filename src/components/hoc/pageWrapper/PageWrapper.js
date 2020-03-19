@@ -1,20 +1,10 @@
 import React from 'react';
 import './PageWrapper.css';
 
-export default props => {
-  const cls = ['PageWrapper_wr'];
-
-  if (true) {
-    cls.push('page_in');
-  } else {
-    cls.push('page_out');
-  }
-
-  return (
-    <div className="PageWrapper">
-      <div className={cls.join(' ')}>
-        { props.children }
-      </div>
+export const PageWrapper = props => (
+  <div className="PageWrapper">
+    <div className="PageWrapper_wr page_in">
+      { props.children }
     </div>
-  );
-};
+  </div>
+);

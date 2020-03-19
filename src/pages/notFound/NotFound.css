@@ -4,18 +4,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
+  width: inherit;
   background-color: #e2e2e2;
   perspective: 900px;
 }
 
 .NotFound h2 {
   color: #208ca0;
-}
-
-@media (min-width: 990px) {
-  .NotFound {
-    height: 70vh;
-  }
 }

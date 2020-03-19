@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { ButtonMenu } from './components/buttonMenu/ButtonMenu';
 import { BlackPanel } from './components/blackPanel/BlackPanel';
 import './Nav.css';
@@ -21,7 +21,7 @@ export const Nav = () => {
   }
 
   return (
-    <Fragment>
+    <>
       {
         navState && <BlackPanel toggleClick={toggleClick} />
       }
@@ -33,6 +33,6 @@ export const Nav = () => {
 
         <NavFooter />
       </nav>
-    </Fragment>
+    </>
   );
 }

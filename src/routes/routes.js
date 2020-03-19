@@ -1,6 +1,6 @@
 import { Home } from '../pages/Home';
-import { About } from '../pages/About';
-import { Chat } from '../pages/Chat';
+import { Settings } from '../pages/Settings';
+import { Portfolio } from '../pages/Portfolio';
 import { NotFound } from '../pages/notFound/NotFound';
 
 export default {
@@ -9,14 +9,14 @@ export default {
     path: '/',
     exact: true
   },
-  about: {
-    page: About,
-    path: '/about',
+  portfolio: {
+    page: Portfolio,
+    path: '/portfolio',
     exact: true
   },
-  chat: {
-    page: Chat,
-    path: '/chat',
+  settings: {
+    page: Settings,
+    path: '/settings',
     exact: true
   },
   notFound: {

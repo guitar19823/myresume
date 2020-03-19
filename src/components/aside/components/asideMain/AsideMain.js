@@ -23,15 +23,24 @@ export const AsideMain = () => {
       </section>
 
       {
+        //console.log([pageData.user.data.profile])
         Object.keys(pageData.user.data).map(value => {
           return (
-            <AsideSection key={value} title={value}>
+            <AsideSection key={value} title={pageData.user.data[value].title}>
               {
-                Object.keys(pageData.user.data[value]).map(item => {
+                Object.keys(pageData.user.data[value].details).map(item => {
                   return (
                     <p key={item}>
-                      { value !== 'profile' && <img src={images[item]} alt={images[item]} /> }
-                      { value === 'social' ? <a href={pageData.user.data[value][item]}>{item}</a> : pageData.user.data[value][item] }
+                      {
+                        value !== 'profile'
+                        ? <img src={images[item]} alt={images[item]} />
+                        : null
+                      }
+                      {
+                        value === 'social'
+                        ? <a href={pageData.user.data[value].details[item]}>{item}</a>
+                        : pageData.user.data[value].details[item]
+                      }
                     </p>
                   );
                 })

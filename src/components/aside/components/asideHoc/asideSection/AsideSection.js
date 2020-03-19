@@ -1,4 +1,5 @@
 import React from 'react';
+import './AsideSection.css';
 
 export const AsideSection = props => {
   return (

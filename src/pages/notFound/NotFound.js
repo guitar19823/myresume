@@ -1,5 +1,5 @@
 import React from 'react';
-import PageWrapper from '../../components/hoc/pageWrapper/PageWrapper';
+import { PageWrapper } from '../../components/hoc/pageWrapper/PageWrapper';
 import './NotFound.css';
 import { Btfly } from './btfly/Btfly';
 import { Pc } from './pc/Pc';

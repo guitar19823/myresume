@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import { Nav } from './components/nav/Nav';
 import routes from './routes/routes';
-import { loadPageData } from './store/actions/pageAction';
+import { getData } from './store/actions/pageAction';
 
 export const App = () => {
   const dispatch = useDispatch();
+  const { activeLanguage } = useSelector(state => state.page);
 
   useEffect(() => {
-    setTimeout(() => {
-      dispatch(loadPageData());
-    }, Math.random() * 2000);
-  }, [dispatch]);
+    getData(activeLanguage)(dispatch);
+  }, [dispatch, activeLanguage]);
 
   return (
     <>

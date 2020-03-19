@@ -12,5 +12,13 @@ export const images = {};
   'github',
   'experience',
   'education',
-  'skills'
+  'skills',
+  'settings',
+  'portfolio',
+  'example_1',
+  'example_2',
+  'example_3',
+  'example_4',
+  'example_5',
+  'example_6'
 ].map(image => images[image] = require(`./assets/img/${image}.png`));

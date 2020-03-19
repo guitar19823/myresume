@@ -1,15 +1,16 @@
 import React from 'react';
+import './Section.css';
 
-export const MainSection = props => {
+export const Section = props => {
   return (
-    <section className="MainSection">
-      <div className="MainSection__title">
+    <section className="Section">
+      <div className="Section__title">
         <img src={props.image} alt={props.image} />
 
         <p>{ props.title }</p>
       </div>
 
-      <div className="MainSection__content_wrap">
+      <div className="Section__content_wrap">
         { props.children }
       </div>
     </section>

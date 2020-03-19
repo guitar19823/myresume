@@ -1,4 +1,5 @@
 .PageWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,21 +11,21 @@
 
 .PageWrapper_wr {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   background-color: #e2e2e2;
   width: 100%;
-  height: inherit;
+  min-height: 100vh;
   border-radius: 0px;
   overflow: hidden;
 }
 
 @media (min-width: 480px) {
   .PageWrapper_wr {
-    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 
-@media (min-width: 920px) {
+@media (min-width: 990px) {
   .PageWrapper {
     padding: 50px 0;
     perspective: 900px;
@@ -32,6 +33,7 @@
   
   .PageWrapper_wr {
     width: 900px;
+    min-height: 70vh;
     border-radius: 3px;
   }
 
