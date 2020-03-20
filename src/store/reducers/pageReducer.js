@@ -2,7 +2,7 @@ import { LOAD_PAGE_DATA, SET_LANGUAGE, SHOW_LOADER, HIDE_LOADER } from '../types
 
 const initialState = {
   isLoaded: false,
-  activeLanguage: 'english',
+  activeLanguage: localStorage.getItem('userLanguage') || 'english',
   pageData: {}
 };
 

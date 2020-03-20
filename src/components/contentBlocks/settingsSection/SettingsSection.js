@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { images } from '../../../images';
 import { Section } from '../sectionHoc/Section';
-import { setLanguage, showLoader } from '../../../store/actions/pageAction';
+import { saveUserLanguage } from '../../../store/actions/pageAction';
 import './SettingsSection.css';
 import { Loader } from '../../loader/Loader';
 
@@ -12,8 +12,7 @@ export const SettingsSection = () => {
 
   const handleClick = (language) => {
     if (activeLanguage !== language) {
-      dispatch(showLoader());
-      dispatch(setLanguage(language));
+      saveUserLanguage(language)(dispatch);
     }
   };
 

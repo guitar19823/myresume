@@ -49,10 +49,18 @@
     padding-top: 0;
   }
 
+  .PortfolioSection {
+    justify-content: flex-start;
+  }
+
   .Portfolio__example {
-    width: 49%;
-    height: 280px;
+    width: 32%;
+    height: 180px;
     margin-bottom: 20px;
     overflow: hidden;
+  }
+
+  .Portfolio__example:not(:nth-child(3n)) {
+    margin-right: 2%;
   }
 }
