@@ -13,19 +13,19 @@ export const DiagrammSection = ({ section }) => {
   }
   
   return (
-    <div className="DiagrammSection_wr">
-      <Section title={pageData.info[section].title} image={images[section]}>
-        {
-          pageData.info[section].data.map((item, key) => {
-            return (
-              <div key={key} className="DiagrammSection">
-                <strong>{item.skillName}</strong>
-                <div><div style={{width: item.level + '%'}}></div></div>
+    <Section title={pageData.info[section].title} image={images[section]}>
+      {
+        pageData.info[section].data.map((item, key) => {
+          return (
+            <div key={key} className="DiagrammSection">
+              <strong>{item.skillName}</strong>
+              <div>
+                <div style={{width: item.level + '%'}}></div>
               </div>
-            );
-          })
-        }
-      </Section>
-    </div>
+            </div>
+          );
+        })
+      }
+    </Section>
   );
 };

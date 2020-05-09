@@ -12,3 +12,9 @@
 .NotFound h2 {
   color: #208ca0;
 }
+
+@media (min-width: 990px) {
+  .NotFound {
+    height: 70vh;
+  }
+}

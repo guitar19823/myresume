@@ -23,7 +23,6 @@ export const AsideMain = () => {
       </section>
 
       {
-        //console.log([pageData.user.data.profile])
         Object.keys(pageData.user.data).map(value => {
           return (
             <AsideSection key={value} title={pageData.user.data[value].title}>

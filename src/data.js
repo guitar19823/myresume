@@ -132,6 +132,7 @@ export const DATA = {
     routes: {
       home: 'home',
       portfolio: 'portfolio',
+      contact: 'contact',
       settings: 'settings'
     },
     settings: {
@@ -280,6 +281,7 @@ export const DATA = {
     routes: {
       home: 'главная',
       portfolio: 'примеры',
+      contact: 'связаться',
       settings: 'настройки'
     },
     settings: {

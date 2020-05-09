@@ -5,3 +5,5 @@ export const HIDE_LOADER = 'HIDE_LOADER';
 
 export const OPEN_IMAGE_PANEL = 'OPEN_IMAGE_PANEL';
 export const CLOSE_IMAGE_PANEL = 'CLOSE_IMAGE_PANEL';
+
+export const SEND_MESSAGE = 'SEND_MESSAGE';

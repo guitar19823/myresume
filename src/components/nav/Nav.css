@@ -5,9 +5,9 @@
   position: fixed;
   z-index: 100;
   top: 0;
+  bottom: 0;
   left: -200px;
   width: 200px;
-  height: 100%;
   background-color: #e2e2e2;
   transition: transform .3s ease-in-out;
 }

@@ -10,7 +10,7 @@ export const NotFound = () => {
       <div className="NotFound">
         <Btfly />
 
-        <Pc />
+        <Pc status={'404'} />
         <h2>Oops! Page not found</h2>
       </div>
     </PageWrapper>

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Pc.css';
 
-export const Pc = () => (
+export const Pc = ({ status }) => (
   <div className="PC">
-    <span>404</span>
-    <div></div>
+    <span>{status}</span>
+    <div />
   </div>
 );

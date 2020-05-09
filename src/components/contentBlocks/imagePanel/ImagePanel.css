@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, .97);
 }
 
 .ImagePanel > img {
@@ -19,6 +19,46 @@
 }
 
 @keyframes open_image {
-  0% { transform: scale(0) }
+  0% { transform: scale(.5) }
   100% { transform: scale(1) }
+}
+
+.counter {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: #e2e2e2;
+}
+
+.prev,
+.next {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #e2e2e2;
+  border-left: 3px solid #e2e2e2;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+.prev {
+  left: 30px;
+  transform: rotateZ(-45deg);
+}
+
+.next {
+  right: 30px;
+  transform: rotateZ(135deg);
+}
+
+@media (min-width: 990px) {
+  .prev,
+  .next {
+    cursor: pointer;
+  }
+}
+  
+.dark {
+  opacity: .2;
+  cursor: default;
 }

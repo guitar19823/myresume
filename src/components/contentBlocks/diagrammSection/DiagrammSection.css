@@ -1,11 +1,3 @@
-.DiagrammSection_wr {
-  transition: all .2s ease-in-out;
-}
-
-.DiagrammSection_wr:hover {
-  transform: scale(1.02);
-}
-
 .DiagrammSection {
   width: 48%;
   display: flex;
@@ -28,4 +20,3 @@
   height: 5px;
   background-color: #208ca0;
 }
-

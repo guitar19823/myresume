@@ -1,0 +1,56 @@
+.ContactForm_wr {
+  padding-top: 50px;
+}
+
+.ContactForm {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ContactForm input[type=text],
+.ContactForm textarea {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #a9a9a9;
+  outline: none;
+}
+
+.ContactForm textarea {
+  resize: none;
+  height: 70px;
+}
+
+.ContactForm input[type=submit] {
+  background-color: #208ca0;
+  /* outline: none; */
+  border: none;
+  cursor: pointer;
+  color: #e2e2e2;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 50px;
+}
+
+.ContactForm .notValid {
+  border: 1px solid #ce3333 !important;
+}
+
+.ContactForm_message {
+  color: #2bbb24;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 990px) {
+  .ContactForm_wr {
+    padding-top: 0;
+  }
+
+  .ContactForm input[type=text],
+  .ContactForm textarea {
+    width: 75%;
+  }
+}

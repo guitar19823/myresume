@@ -8,6 +8,7 @@ export const ButtonClose = () => {
 
   const handleClick = () => {
     dispatch(closeImage());
+    document.body.classList.remove('hidden');
   };
 
 	return (

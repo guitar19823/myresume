@@ -1,6 +1,7 @@
 import { Home } from '../pages/Home';
-import { Settings } from '../pages/Settings';
 import { Portfolio } from '../pages/Portfolio';
+import { Contact } from '../pages/Contact';
+import { Settings } from '../pages/Settings';
 import { NotFound } from '../pages/notFound/NotFound';
 
 export default {
@@ -12,6 +13,11 @@ export default {
   portfolio: {
     page: Portfolio,
     path: '/portfolio',
+    exact: true
+  },
+  contact: {
+    page: Contact,
+    path: '/contact',
     exact: true
   },
   settings: {

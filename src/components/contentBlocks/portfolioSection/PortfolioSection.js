@@ -2,11 +2,11 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Loader } from '../../loader/Loader';
 import { Section } from '../sectionHoc/Section';
-import { images } from '../../../images';
+import { images, portfolioImages } from '../../../images';
 import { openImage } from '../../../store/actions/imageAction';
 import './PortfolioSection.css';
 
-export const PortfolioSection = () => {
+export const PortfolioSection = React.memo(() => {
   const { pageData, isLoaded } = useSelector(state => state.page);
   const dispatch = useDispatch();
 
@@ -16,6 +16,7 @@ export const PortfolioSection = () => {
 
   const handleClick = image => {
     dispatch(openImage(image));
+    document.body.classList.add('hidden');
   };
 
   return (
@@ -23,13 +24,13 @@ export const PortfolioSection = () => {
       <Section title={pageData.info.portfolio.title} image={images.portfolio}>
         <div className="PortfolioSection">
           {
-            Object.keys(images).map(image => (
+            Object.keys(portfolioImages).map(image => (
               !image.indexOf('example') ? (
                 <div key={image} className="Portfolio__example">
                   <img
-                    src={images[image]}
+                    src={portfolioImages[image]}
                     alt={image}
-                    onClick={() => handleClick(images[image])}
+                    onClick={() => handleClick(image)}
                   />
                 </div>
               ) : null
@@ -39,4 +40,4 @@ export const PortfolioSection = () => {
       </Section>
     </div>
   );
-};
+});

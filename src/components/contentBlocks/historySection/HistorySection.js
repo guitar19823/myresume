@@ -13,25 +13,23 @@ export const HistorySection = ({ section }) => {
   }
   
   return (
-    <div className="HistorySection_wr">
-      <Section title={pageData.info[section].title} image={images[section]}>
-        {
-          pageData.info[section].data.map((item, key) => {
-            return (
-              <div key={key} className="HistorySection">
-                <strong>{item.interval}</strong>
-                <div></div>
-                <div className="HistorySection_text">
-                  <p>
-                    <strong>{item.position}</strong>
-                    {item.description}
-                  </p>
-                </div>
+    <Section title={pageData.info[section].title} image={images[section]}>
+      {
+        pageData.info[section].data.map((item, key) => {
+          return (
+            <div key={key} className="HistorySection">
+              <strong>{item.interval}</strong>
+              <div></div>
+              <div className="HistorySection_text">
+                <p>
+                  <strong>{item.position}</strong>
+                  {item.description}
+                </p>
               </div>
-            );
-          })
-        }
-      </Section>
-    </div>
+            </div>
+          );
+        })
+      }
+    </Section>
   );
 };
